@@ -19,7 +19,7 @@
     <!-- DataTables CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css" />
     <!-- Dashboard CSS -->
-    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -93,7 +93,8 @@
      @include('admin.layouts.header')
     <div class="container-fluid">
         <!-- content here -->
-         @include('admin.layouts.sidebar')
+         
+         @yield('content')
     </div>
     <!-- Jquery JS -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -136,6 +137,6 @@
             });
         }
     </script>
-    <script src="js/colors.js"></script>
+    <script src="{{asset('js/colors.js')}}"></script>
 
 </html>
